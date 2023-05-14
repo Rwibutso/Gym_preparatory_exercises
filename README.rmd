@@ -1,0 +1,78 @@
+### Exercise2
+
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git add home.html
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git stash
+Saved working directory and index state WIP on dev: 1262c6e first commit
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git add about.html
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git stash
+Saved working directory and index state WIP on dev: 1262c6e first commit
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git add team.html
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git stash
+Saved working directory and index state WIP on dev: 1262c6e first commit
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git stash list
+stash@{0}: WIP on dev: 1262c6e first commit
+stash@{1}: WIP on dev: 1262c6e first commit
+stash@{2}: WIP on dev: 1262c6e first commit
+stash@{3}: WIP on dev: 1262c6e first commit
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+
+Dropped stash@{1} (5cc0d41fb3f8cd88d55228385358db3fa8a9c98f)
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git stash list
+stash@{0}: WIP on dev: 1262c6e first commit
+stash@{1}: WIP on dev: 1262c6e first commit
+stash@{2}: WIP on dev: 1262c6e first commit
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git stash pop stash@{1}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   about.html
+        new file:   home.html
+
+Dropped stash@{1} (2d5b8eeaf4dbd154d04f63111b6258c6b9333af5)
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git add .
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git commit -m "stashing pages"
+[dev 7967232] stashing pages
+ 2 files changed, 22 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git push -u origin main
+To https://github.com/Rwibutso/Gym_preparatory_exercises.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Rwibutso/Gym_preparatory_exercises.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git push -u origin main -f
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 93.08 KiB | 8.46 MiB/s, done.
+Total 7 (delta 0), reused 0 (delta 0), pack-reused 0
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Rwibutso/Gym-Git-Exercise-Solutions.git
+To https://github.com/Rwibutso/Gym_preparatory_exercises.git
+ + 09e643e...1262c6e main -> main (forced update)
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git stash list
+stash@{0}: WIP on dev: 1262c6e first commit
+stash@{1}: WIP on dev: 1262c6e first commit
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git stash pop stash@{0}
+On branch dev
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   team.html
+
+Dropped stash@{0} (08fe7c5a152160f721ca14166112ec518eacc2eb)
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git reset --hard
+HEAD is now at 7967232 stashing pages
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git status
+On branch dev
+nothing to commit, working tree clean
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ 
