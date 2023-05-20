@@ -76,3 +76,139 @@ serge@Rwbts:~/Documents/Projects/Gym_exerices$ git status
 On branch dev
 nothing to commit, working tree clean
 serge@Rwbts:~/Documents/Projects/Gym_exerices$ 
+
+# Bundle 2 
+  
+### Exercise2
+  
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git pull
+remote: Enumerating objects: 2, done.
+remote: Counting objects: 100% (2/2), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), 1.20 KiB | 613.00 KiB/s, done.
+From https://github.com/Rwibutso/Gym_preparatory_exercises
+   1262c6e..16afe35  main       -> origin/main
+Updating 1262c6e..16afe35
+Fast-forward
+ README.rmd   | 78 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ about.html   | 11 +++++++++++
+ home.html    | 11 +++++++++++
+ service.html | 11 +++++++++++
+ 4 files changed, 111 insertions(+)
+ create mode 100644 README.rmd
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 service.html
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git add .
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git commit -m "ft/service-redesign commit"
+[ft/service-redesign 96b5139] ft/service-redesign commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git push origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 384 bytes | 384.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Rwibutso/Gym-Git-Exercise-Solutions.git
+remote: 
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/Rwibutso/Gym-Git-Exercise-Solutions/pull/new/ft/service-redesign
+remote: 
+To https://github.com/Rwibutso/Gym_preparatory_exercises.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git add .
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git commit -m "main commit"
+[main 095aca2] main commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git push origin main
+To https://github.com/Rwibutso/Gym_preparatory_exercises.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/Rwibutso/Gym_preparatory_exercises.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git push origin main -f
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 373 bytes | 373.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Rwibutso/Gym-Git-Exercise-Solutions.git
+To https://github.com/Rwibutso/Gym_preparatory_exercises.git
+ + 8e6e2f4...095aca2 main -> main (forced update)
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git branch
+  dev
+  ft/bundle-2
+  ft/service-redesign
+* main
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git commit -m "ft/service-redesign commit"
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git add .
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git commit --amend --no-edit
+[main 17290fc] main commit
+ Date: Thu May 18 08:40:50 2023 +0200
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git push origin main -f
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 361 bytes | 361.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Rwibutso/Gym-Git-Exercise-Solutions.git
+To https://github.com/Rwibutso/Gym_preparatory_exercises.git
+ + 095aca2...17290fc main -> main (forced update)
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git checkout  ft/service-redesign
+Switched to branch 'ft/service-redesign'
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git diff
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git merge main
+Auto-merging service.html
+CONFLICT (content): Merge conflict in service.html
+Automatic merge failed; fix conflicts and then commit the result.
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git add .
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git commit 
+[ft/service-redesign f3073a7] Merge branch 'main' into ft/service-redesign
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git commit --amend --no-edit
+[ft/service-redesign 0a04cc2] Merge branch 'main' into ft/service-redesign
+ Date: Thu May 18 09:08:50 2023 +0200
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git push
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+serge@Rwbts:~/Documents/Projects/Gym_exerices$ git push --set-upstream origin ft/service-redesign
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 363 bytes | 363.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/Rwibutso/Gym-Git-Exercise-Solutions.git
+To https://github.com/Rwibutso/Gym_preparatory_exercises.git
+   96b5139..0a04cc2  ft/service-redesign -> ft/service-redesign
+Branch 'ft/service-redesign' set up to track remote branch 'ft/service-redesign' from 'origin'
